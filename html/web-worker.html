@@ -9,48 +9,16 @@
   <body>
     <main>
       <h2>Using Web Workers</h2>
-
-      <p>In this example, we have the exact same setup, only this time the code that handles counting down from 1,000,000,000 is inside of a Web Worker.</p>
-
       <div>
-        <button id="begin">Begin</button>
-        <button id="color-button" style="color:blue">Now you can change it!</button>
+        <button id="Start Task">Begin</button>
+        <button id="color-button" style="color:blue">Press me!</button>
       </div>
 
       <p>Notice that here you can change the color of the button at the same time that the while loop is running it's code? This is because the Web Worker is running the While loop on a different thread which leaves our main page's thread open, allowing the color changing event listener to run!</p>
     </main>
-
-    <section>
-      <h3>Setting up Web Workers</h3>
-
-      <p>Setting up Web Workers is fairly easy, just call it's constructor and pass in the .js file that you want it to run! Here are the two .js files that we used in this demo:</p>
-
-      <p>"counter.js" just counts down from 1 billion and console logs once every million numbers. Then it logs the ending message:</p>
-      <pre>
-        let counter = 1000000001
-        
-          while( counter-- ) {
-            if( counter % 100000000 === 0 ){
-              console.log( `While loop is Currently at : ${counter}` ) 
-            } 
-          }
-
-        console.log( '--------- While Loop has Ended! ---------' )
-      </pre>
-      
-      <p>While the "app.js" file just creates a new Worker() and passes in the "counter.js" file:</p>
-      
-      <pre>
-        new Worker('counter.js')
-      </pre>
-      
-      
-    
-      <p>Finally, the html file points to app.js which creates the Web Worker. The Web Worker then loads in "counter.js" where it will run on a Web Worker thread.</p>
-
-    </section>
     <a href="../index.html">Back to Home</a>
     <script src="../scripts/buttons.js"></script>
     <script src="../scripts/app.js"></script>
   </body>
 </html>
+Mozilla
