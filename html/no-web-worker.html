@@ -13,19 +13,16 @@
         <h2>Button Presses: </h2>
         <h2 id="clicks">0</h2>
       </div>
-      
-
-      
       <div>
         <button onclick="onClick()">+1</button>
       </div>
     </main>
 
     <br>
-    </br>
-    <div><a href="./web-worker.html">With Web Worker</a></div>
-    
-    <script src="../scripts/counter.js"></script>
+  </br>
+    <div><a href="./no-web-worker.html">Without Web Worker</a></div>
+
+
     <script>
       var clicks = 0;
 
@@ -34,5 +31,6 @@
         document.getElementById("clicks").innerHTML = clicks;
       };
     </script>
+    <script src="../scripts/app.js"></script>
   </body>
 </html>
