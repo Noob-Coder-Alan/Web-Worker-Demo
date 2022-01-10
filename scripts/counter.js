@@ -1,9 +1,13 @@
 'use strict'
 
-let counter = 1000000001;
+let counter = 1000;
 
-while(counter--){
-  if(counter % 100000000 === 0) console.log(`While loop is Currently at: ${counter}`);
+for(let i = 0; i < counter; i++){
+  for(let j = 0; j < counter; j+=12){
+    if(i < 100000){
+      console.log(`Task Progress: ${i/10}%`)
+    }
+  }
 }
 
-console.log('------------ While Loop has Ended! -----------');
+console.log('Task Complete!');
