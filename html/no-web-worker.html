@@ -8,13 +8,31 @@
   </head>
   <body>
     <main>
+      <h2>Program Without Web Worker</h2>
       <div>
-        <button id="begin">Begin</button>
-        <button id="color-button" style="color:blue">Try to change my color!</button>
+        <h2>Button Presses: </h2>
+        <h2 id="clicks">0</h2>
+      </div>
+      
+
+      
+      <div>
+        <button onclick="onClick()">+1</button>
       </div>
     </main>
-    <div><a href="./web-worker.html">Utilizing Web Workers.</a></div>
-    <script src="../scripts/buttons.js"></script>
+
+    <br>
+    </br>
+    <div><a href="./web-worker.html">With Web Worker</a></div>
+    
     <script src="../scripts/counter.js"></script>
+    <script>
+      var clicks = 0;
+
+      function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+      };
+    </script>
   </body>
 </html>
