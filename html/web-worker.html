@@ -8,15 +8,29 @@
   </head>
   <body>
     <main>
-      <h2>Using Web Workers</h2>
+      <h2>Program Without Web Worker</h2>
       <div>
-        <button id="Start Task">Begin</button>
-        <button id="color-button" style="color:blue">Press me!</button>
+        <h2>Button Presses: </h2>
+        <h2 id="clicks">0</h2>
+      </div>
+      <div>
+        <button onclick="onClick()">+1</button>
       </div>
     </main>
-    <a href="../index.html">Back to Home</a>
-    <script src="../scripts/buttons.js"></script>
+
+    <br>
+  </br>
+    <div><a href="./no-web-worker.html">Without Web Worker</a></div>
+
+
+    <script>
+      var clicks = 0;
+
+      function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+      };
+    </script>
     <script src="../scripts/app.js"></script>
   </body>
 </html>
-Mozilla
